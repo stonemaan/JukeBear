@@ -1,0 +1,75 @@
+:root {
+  --blau-hell: #5cb8ff;
+  --blau-dunkel: #3361f2;
+  --creme: #f8f5ef;
+  --rosa: #ffbfb8;
+  --text: #1c1c1e;
+  --text-soft: #5b5b60;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--creme);
+  line-height: 1.6;
+}
+a { color: var(--blau-dunkel); }
+
+.kopf {
+  background: linear-gradient(160deg, var(--blau-hell), var(--blau-dunkel) 75%);
+  color: #fff;
+  padding: 2.4rem 1.4rem 3.4rem;
+  text-align: center;
+}
+.kopf img {
+  width: 72px; height: 72px;
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(0, 30, 90, .3);
+  margin-bottom: .7rem;
+}
+.kopf.gross img { width: 128px; height: 128px; border-radius: 30px; }
+.kopf h1 { margin: .1rem 0 .3rem; font-size: 1.7rem; }
+.kopf p { color: rgba(255, 255, 255, .92); font-size: 1rem; max-width: 34rem; margin: 0 auto; }
+.zurueck {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: .88rem;
+  color: rgba(255, 255, 255, .92);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 999px;
+  padding: .35rem .9rem;
+}
+
+main {
+  max-width: 720px;
+  margin: -1.9rem auto 0;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(30, 60, 140, .14);
+  padding: 1.8rem 1.7rem 1.4rem;
+}
+h2 { font-size: 1.1rem; margin: 1.6rem 0 .5rem; }
+h2:first-child { margin-top: .2rem; }
+p, li { font-size: .98rem; }
+p { margin: .4rem 0; }
+.abschnitt + .abschnitt { border-top: 1px solid #ece6da; padding-top: 1.1rem; }
+
+.kontakt {
+  background: #eef4ff;
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.faq { margin: 1rem 0; }
+.faq-frage { font-weight: 600; margin-bottom: .2rem; }
+.faq-antwort { margin-top: 0; color: var(--text); }
+
+.merkmale { display: grid; gap: .9rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin: 1rem 0; }
+.merkmal { background: #f4f7ff; border-radius: 14px; padding: .9rem 1rem; }
+.merkmal b { display: block; margin-bottom: .2rem; }
+
+.fussnav { text-align: center; padding: 1.6rem 1.4rem 0; font-size: .92rem; }
+footer { text-align: center; padding: 1rem 1.4rem 3rem; font-size: .86rem; color: var(--text-soft); }
