@@ -71,5 +71,34 @@ p { margin: .4rem 0; }
 .merkmal { background: #f4f7ff; border-radius: 14px; padding: .9rem 1rem; }
 .merkmal b { display: block; margin-bottom: .2rem; }
 
+/* Screenshots: swipeable row on phones, two columns on wider screens. */
+.galerie {
+  display: flex;
+  gap: .9rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin: .8rem -1.7rem .4rem;
+  padding: .3rem 1.7rem 1rem;
+}
+.galerie img {
+  flex: none;
+  width: 70%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(30, 60, 140, .18);
+  scroll-snap-align: center;
+}
+@media (min-width: 640px) {
+  .galerie {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: visible;
+    margin: .8rem 0 .4rem;
+    padding: .3rem 0 .6rem;
+  }
+  .galerie img { width: 100%; max-width: none; }
+}
+
 .fussnav { text-align: center; padding: 1.6rem 1.4rem 0; font-size: .92rem; }
 footer { text-align: center; padding: 1rem 1.4rem 3rem; font-size: .86rem; color: var(--text-soft); }
